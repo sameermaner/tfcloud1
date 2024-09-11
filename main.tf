@@ -1,6 +1,9 @@
 provider "azurerm" {
 skip_provider_registration = "true"
-subscription_id = "33ab2735-3851-4bf4-9407-8979233f8841"
+subscription_id = var.subscription_id
+client_id = var.client_id
+client_secret = var.client_secret
+tenant_id = var.tenant_id
     features {}
 }
 resource "azurerm_resource_group" "rg1" {
